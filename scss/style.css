@@ -1,0 +1,829 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700;800&display=swap");
+/*
+em, rem - ustawianie wielkości fontów czy wysokości linii
+vw, vh - kiedy musimy wymusić na elemencie relatywną szerokość czy wysokość względem wielkości ekranu (przydatne kiedy sekcja ma zajmować 100% wysokości ekranu)
+px - marginesy, paddingi, cienie, bordery itp.
+*/
+.navbar {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+}
+.navbar .navbar-logo-list {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
+.navbar .navbar-logo-list h1 {
+  font-family: "Raleway", sans-serif;
+  color: #08a6e4;
+  font-size: 32px;
+  font-weight: 300;
+  position: relative;
+  right: 400px;
+}
+.navbar .navbar-logo-list ul {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  position: relative;
+  left: 400px;
+}
+.navbar .navbar-logo-list ul li {
+  margin: 0 40px;
+  padding: 27px 18px 27px 18px;
+  color: #a5a5a5;
+  font-size: 11px;
+  letter-spacing: 3.28px;
+}
+.navbar .navbar-logo-list ul li:hover {
+  padding: 27px 18px 27px 18px;
+  border-bottom: 4px solid #08a6e4;
+  cursor: pointer;
+  color: #000000;
+  font-weight: 600;
+  letter-spacing: 3.28px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .container-text {
+  position: relative;
+  top: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container .container-text h1 {
+  text-align: center;
+  width: 226px;
+  height: 57px;
+  font-size: 49px;
+  font-family: "Raleway", sans-serif;
+}
+.container .container-text p {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 20px;
+  font-weight: 500;
+  margin-bottom: 38px;
+}
+.container .container-text button {
+  width: 440px;
+  height: 67px;
+  background-color: #08a6e4;
+  border-radius: 40px;
+  border: none;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0px 3px 6px rgba(7, 172, 230, 0.16);
+}
+.container img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 180px;
+}
+
+.most-popular-section {
+  height: 531px;
+  border: 1px solid black;
+  margin-top: 180px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.most-popular-section .most-popular-heading-text {
+  margin-top: 100px;
+  font-size: 36px;
+  font-family: "Raleway", sans-serif;
+  position: relative;
+}
+.most-popular-section .most-popular-columns {
+  width: 100%;
+  height: 531px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -50px;
+}
+.most-popular-section .most-popular-columns .daily-entries {
+  margin: 0 100px 0 100px;
+  height: 140px;
+  width: 116px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+}
+.most-popular-section .most-popular-columns .daily-entries .elipse {
+  width: 62px;
+  height: 62px;
+  background-color: #fb3b64;
+  border-radius: 50px;
+}
+.most-popular-section .most-popular-columns .daily-entries .elipse img {
+  position: relative;
+  left: 28px;
+}
+.most-popular-section .most-popular-columns .daily-entries h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 15px;
+  letter-spacing: 3px;
+}
+.most-popular-section .most-popular-columns .daily-entries p {
+  font-size: 17px;
+  color: #a5a5a5;
+}
+.most-popular-section .most-popular-columns .seen-products {
+  margin: 0 100px 0 100px;
+  height: 167px;
+  width: 176px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+}
+.most-popular-section .most-popular-columns .seen-products .elipse {
+  width: 62px;
+  height: 62px;
+  background-color: #08a6e4;
+  border-radius: 50px;
+}
+.most-popular-section .most-popular-columns .seen-products .elipse img {
+  position: relative;
+  left: 20px;
+  top: 13px;
+}
+.most-popular-section .most-popular-columns .seen-products h1 {
+  position: relative;
+  top: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.most-popular-section .most-popular-columns .seen-products p {
+  position: relative;
+  top: 17px;
+  margin-top: 12px;
+  text-align: center;
+  font-size: 17px;
+  color: #a5a5a5;
+}
+.most-popular-section .most-popular-columns .added-post {
+  margin: 0 100px 0 100px;
+  height: 167px;
+  width: 176px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+}
+.most-popular-section .most-popular-columns .added-post .elipse {
+  width: 62px;
+  height: 62px;
+  background-color: #55dfb4;
+  border-radius: 50px;
+  margin-bottom: 14px;
+}
+.most-popular-section .most-popular-columns .added-post .elipse img {
+  position: relative;
+  left: 30px;
+  top: 5px;
+}
+.most-popular-section .most-popular-columns .added-post h1 {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.most-popular-section .most-popular-columns .added-post p {
+  position: relative;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 17px;
+  color: #a5a5a5;
+}
+
+.statistics-section {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  height: 1395px;
+}
+.statistics-section .statistics-1 {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #e8e9ed;
+  width: 1124px;
+  height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.statistics-section .statistics-1 .statistics-1-text {
+  position: relative;
+  right: 100px;
+  width: 416px;
+  height: 188px;
+  text-align: left;
+}
+.statistics-section .statistics-1 .statistics-1-text h1 {
+  margin: 20px 0 20px 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 36px;
+}
+.statistics-section .statistics-1 .statistics-1-text p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+.statistics-section .statistics-1 hr {
+  position: relative;
+  right: 42px;
+  top: 30px;
+}
+.statistics-section .statistics-1 .statistics-1-image {
+  width: 433px;
+  height: 294px;
+  position: relative;
+  left: 60px;
+}
+.statistics-section .statistics-1 .statistics-1-image .square {
+  width: 180px;
+  height: 180px;
+  border-radius: 41px;
+  background-color: #fb3b64;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  z-index: 2;
+  margin-left: 210px;
+}
+.statistics-section .statistics-1 .statistics-1-image img {
+  width: 386px;
+  height: 219px;
+  z-index: 3;
+  position: relative;
+  bottom: 130px;
+}
+.statistics-section .statistics-2 {
+  margin-top: 37px;
+  background-color: white;
+  border-radius: 5px;
+  width: 1124px;
+  height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e8e9ed;
+}
+.statistics-section .statistics-2 .statistics-2-text {
+  position: relative;
+  left: 120px;
+  width: 416px;
+  height: 188px;
+  text-align: left;
+}
+.statistics-section .statistics-2 .statistics-2-text h1 {
+  margin: 20px 0 20px 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 36px;
+}
+.statistics-section .statistics-2 .statistics-2-text p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+.statistics-section .statistics-2 hr {
+  position: relative;
+  right: 40px;
+  top: 30px;
+}
+.statistics-section .statistics-2 .statistics-2-image {
+  width: 433px;
+  height: 294px;
+  position: relative;
+  right: 70px;
+  bottom: 20px;
+}
+.statistics-section .statistics-2 .statistics-2-image .square {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background-color: #08a6e4;
+  z-index: 2;
+}
+.statistics-section .statistics-2 .statistics-2-image img {
+  width: 426px;
+  height: 328px;
+  z-index: 3;
+  position: relative;
+  bottom: 300px;
+}
+.statistics-section .statistics-3 {
+  margin-top: 37px;
+  width: 1126px;
+  height: 372px;
+}
+.statistics-section .statistics-3 .statistics-3-box {
+  display: flex;
+}
+.statistics-section .statistics-3 .statistics-3-box .statistics-3-text {
+  width: 623px;
+  height: 370px;
+  border: 1px solid #e8e9ed;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.statistics-section .statistics-3 .statistics-3-box .statistics-3-text h1 {
+  position: relative;
+  left: 30px;
+  top: 70px;
+  font-size: 36px;
+  font-family: "Raleway", sans-serif;
+}
+.statistics-section .statistics-3 .statistics-3-box .statistics-3-text p {
+  top: 70px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 30px;
+  position: relative;
+  left: 30px;
+}
+.statistics-section .statistics-3 .statistics-3-box .statistics-3-text hr {
+  position: relative;
+  right: 110px;
+  margin-top: 44px;
+  position: relative;
+  top: 70px;
+}
+.statistics-section .statistics-3 .statistics-3-box .statistics-3-image {
+  border: 1px solid #e8e9ed;
+  width: 440px;
+  height: 370px;
+  border-radius: 5px;
+  background-color: #55dfb4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 62px;
+}
+.statistics-section .statistics-3 .statistics-3-box .statistics-3-image img {
+  width: 296px;
+  height: 208px;
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.pricing .pricing-headText {
+  margin-top: 100px;
+  font-size: 36px;
+  font-family: "Raleway", sans-serif;
+}
+.pricing .pricing-box {
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  width: 1266px;
+  height: 616px;
+}
+.pricing .pricing-box .pricing-basic {
+  margin: 20px 30px 0 60px;
+  width: 372px;
+  height: 461px;
+  border-radius: 18px;
+  border: 1px solid #fb3b64;
+}
+.pricing .pricing-box .pricing-basic h2 {
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 34px;
+  margin-bottom: 24px;
+}
+.pricing .pricing-box .pricing-basic h1 {
+  font-size: 46px;
+  font-family: "Open Sans", sans-serif;
+  color: #fb3b64;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.pricing .pricing-box .pricing-basic .pricing-basic-list {
+  text-align: center;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+.pricing .pricing-box .pricing-basic .pricing-basic-list .fa-yes {
+  margin: 10px 0 10px 0;
+  color: #55dfb4;
+  margin-right: 10px;
+}
+.pricing .pricing-box .pricing-basic .pricing-basic-list .fa-no {
+  margin: 10px 0 10px 0;
+  color: #fb3b64;
+  margin-right: 10px;
+}
+.pricing .pricing-box .pricing-basic .pricing-basic-button {
+  border-radius: 23px;
+  width: 150px;
+  height: 50px;
+  background-color: #fb3b64;
+  color: #ffffff;
+  border: none;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  position: relative;
+  top: 70px;
+}
+.pricing .pricing-box .pricing-professional {
+  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.1607843137);
+  margin: 0 30px 0 30px;
+  width: 405px;
+  height: 500px;
+  border-radius: 18px;
+  text-align: center;
+  border: 1px solid #08a6e4;
+}
+.pricing .pricing-box .pricing-professional h2 {
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 34px;
+  margin-bottom: 24px;
+}
+.pricing .pricing-box .pricing-professional h1 {
+  font-size: 46px;
+  font-family: "Open Sans", sans-serif;
+  color: #08a6e4;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.pricing .pricing-box .pricing-professional .pricing-small-offer {
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  bottom: 50px;
+}
+.pricing .pricing-box .pricing-professional .pricing-professional-list {
+  text-align: center;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+.pricing .pricing-box .pricing-professional .pricing-professional-list .fa-yes {
+  margin: 10px 0 10px 0;
+  color: #55dfb4;
+  margin-right: 10px;
+}
+.pricing .pricing-box .pricing-professional .pricing-professional-list .fa-no {
+  margin: 10px 0 10px 0;
+  color: #fb3b64;
+  margin-right: 10px;
+}
+.pricing .pricing-box .pricing-professional .pricing-professional-button {
+  border-radius: 23px;
+  width: 150px;
+  height: 50px;
+  background-color: #08a6e4;
+  color: #ffffff;
+  border: none;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  position: relative;
+  top: 100px;
+}
+.pricing .pricing-box .pricing-premium {
+  margin: 20px 60px 0 30px;
+  width: 372px;
+  height: 461px;
+  border-radius: 18px;
+  border: 1px solid #55dfb4;
+}
+.pricing .pricing-box .pricing-premium h2 {
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 34px;
+  margin-bottom: 24px;
+}
+.pricing .pricing-box .pricing-premium h1 {
+  font-size: 46px;
+  font-family: "Open Sans", sans-serif;
+  color: #55dfb4;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.pricing .pricing-box .pricing-premium .pricing-small-offer {
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  bottom: 50px;
+}
+.pricing .pricing-box .pricing-premium .pricing-premium-list {
+  text-align: center;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+.pricing .pricing-box .pricing-premium .pricing-premium-list .fa-yes {
+  margin: 10px 0 10px 0;
+  color: #55dfb4;
+  margin-right: 10px;
+}
+.pricing .pricing-box .pricing-premium .pricing-premium-list .fa-no {
+  margin: 10px 0 10px 0;
+  color: #fb3b64;
+  margin-right: 10px;
+}
+.pricing .pricing-box .pricing-premium .pricing-premium-button {
+  border-radius: 23px;
+  width: 150px;
+  height: 50px;
+  background-color: #55dfb4;
+  color: #ffffff;
+  border: none;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  position: relative;
+  top: 70px;
+}
+
+.calculator {
+  width: 100vw;
+  height: 538px;
+  background-color: #f7f7f7;
+}
+.calculator h1 {
+  padding-top: 87px;
+  text-align: center;
+  font-size: 36px;
+  font-family: "Raleway", sans-serif;
+}
+.calculator .calculator-body {
+  display: flex;
+  justify-content: center;
+}
+.calculator .calculator-body .calculator-body-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  right: 40px;
+  margin-top: 52px;
+  width: 440px;
+}
+.calculator .calculator-body .calculator-body-left .product-input, .calculator .calculator-body .calculator-body-left .orders-input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 440px;
+  height: 40px;
+  box-shadow: 0px 3px 6px rgba(8, 166, 228, 0.1607843137);
+  border: 1px solid #08a6e4;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #a5a5a5;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+}
+.calculator .calculator-body .calculator-body-left .choose-package {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 443px;
+  height: 40px;
+  box-shadow: 0px 3px 6px rgba(8, 166, 228, 0.1607843137);
+  border: 1px solid #08a6e4;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  color: #a5a5a5;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.calculator .calculator-body .calculator-body-left .choose-package-elements {
+  display: none;
+  width: 440px;
+  height: 105px;
+  border: 1px solid #EB476E;
+  border-radius: 6px;
+  background: white;
+}
+.calculator .calculator-body .calculator-body-left .choose-package-elements div {
+  background-color: #ffffff;
+  height: 33%;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 6px;
+}
+.calculator .calculator-body .calculator-body-left .choose-package-elements div:hover {
+  background-color: #f7f7f7;
+}
+.calculator .calculator-body .checkbox-label-pay1, .calculator .calculator-body .checkbox-label-pay2 {
+  width: 300px;
+  height: 24px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 70px;
+}
+.calculator .calculator-body .checkbox-label-pay1 input, .calculator .calculator-body .checkbox-label-pay2 input {
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+}
+.calculator .calculator-body .checkbox-label-pay1 p, .calculator .calculator-body .checkbox-label-pay2 p {
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+}
+.calculator .calculator-body .list, .calculator .calculator-body .list2 {
+  width: 385px;
+  height: 247px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  top: 60px;
+}
+.calculator .calculator-body .list .element, .calculator .calculator-body .list .quantityElement, .calculator .calculator-body .list .ordersElement, .calculator .calculator-body .list .basicElement, .calculator .calculator-body .list .accountingElement, .calculator .calculator-body .list .terminalElement, .calculator .calculator-body .list2 .element, .calculator .calculator-body .list2 .quantityElement, .calculator .calculator-body .list2 .ordersElement, .calculator .calculator-body .list2 .basicElement, .calculator .calculator-body .list2 .accountingElement, .calculator .calculator-body .list2 .terminalElement {
+  margin-top: 8px;
+  width: 385px;
+  height: 31px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  background-color: #55dfb4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  bottom: 38px;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.calculator .calculator-body .list .element span:nth-of-type(3), .calculator .calculator-body .list .element .span3products, .calculator .calculator-body .list .element .span3orders, .calculator .calculator-body .list .element .span3basic, .calculator .calculator-body .list .quantityElement span:nth-of-type(3), .calculator .calculator-body .list .quantityElement .span3products, .calculator .calculator-body .list .quantityElement .span3orders, .calculator .calculator-body .list .quantityElement .span3basic, .calculator .calculator-body .list .ordersElement span:nth-of-type(3), .calculator .calculator-body .list .ordersElement .span3products, .calculator .calculator-body .list .ordersElement .span3orders, .calculator .calculator-body .list .ordersElement .span3basic, .calculator .calculator-body .list .basicElement span:nth-of-type(3), .calculator .calculator-body .list .basicElement .span3products, .calculator .calculator-body .list .basicElement .span3orders, .calculator .calculator-body .list .basicElement .span3basic, .calculator .calculator-body .list .accountingElement span:nth-of-type(3), .calculator .calculator-body .list .accountingElement .span3products, .calculator .calculator-body .list .accountingElement .span3orders, .calculator .calculator-body .list .accountingElement .span3basic, .calculator .calculator-body .list .terminalElement span:nth-of-type(3), .calculator .calculator-body .list .terminalElement .span3products, .calculator .calculator-body .list .terminalElement .span3orders, .calculator .calculator-body .list .terminalElement .span3basic, .calculator .calculator-body .list2 .element span:nth-of-type(3), .calculator .calculator-body .list2 .element .span3products, .calculator .calculator-body .list2 .element .span3orders, .calculator .calculator-body .list2 .element .span3basic, .calculator .calculator-body .list2 .quantityElement span:nth-of-type(3), .calculator .calculator-body .list2 .quantityElement .span3products, .calculator .calculator-body .list2 .quantityElement .span3orders, .calculator .calculator-body .list2 .quantityElement .span3basic, .calculator .calculator-body .list2 .ordersElement span:nth-of-type(3), .calculator .calculator-body .list2 .ordersElement .span3products, .calculator .calculator-body .list2 .ordersElement .span3orders, .calculator .calculator-body .list2 .ordersElement .span3basic, .calculator .calculator-body .list2 .basicElement span:nth-of-type(3), .calculator .calculator-body .list2 .basicElement .span3products, .calculator .calculator-body .list2 .basicElement .span3orders, .calculator .calculator-body .list2 .basicElement .span3basic, .calculator .calculator-body .list2 .accountingElement span:nth-of-type(3), .calculator .calculator-body .list2 .accountingElement .span3products, .calculator .calculator-body .list2 .accountingElement .span3orders, .calculator .calculator-body .list2 .accountingElement .span3basic, .calculator .calculator-body .list2 .terminalElement span:nth-of-type(3), .calculator .calculator-body .list2 .terminalElement .span3products, .calculator .calculator-body .list2 .terminalElement .span3orders, .calculator .calculator-body .list2 .terminalElement .span3basic {
+  font-weight: 600;
+}
+.calculator .calculator-body .list .element span.span1products, .calculator .calculator-body .list .quantityElement span.span1products, .calculator .calculator-body .list .ordersElement span.span1products, .calculator .calculator-body .list .basicElement span.span1products, .calculator .calculator-body .list .accountingElement span.span1products, .calculator .calculator-body .list .terminalElement span.span1products, .calculator .calculator-body .list2 .element span.span1products, .calculator .calculator-body .list2 .quantityElement span.span1products, .calculator .calculator-body .list2 .ordersElement span.span1products, .calculator .calculator-body .list2 .basicElement span.span1products, .calculator .calculator-body .list2 .accountingElement span.span1products, .calculator .calculator-body .list2 .terminalElement span.span1products {
+  position: relative;
+  right: 0px;
+}
+.calculator .calculator-body .list .element span.span1accounting, .calculator .calculator-body .list .element .span1terminal, .calculator .calculator-body .list .quantityElement span.span1accounting, .calculator .calculator-body .list .quantityElement .span1terminal, .calculator .calculator-body .list .ordersElement span.span1accounting, .calculator .calculator-body .list .ordersElement .span1terminal, .calculator .calculator-body .list .basicElement span.span1accounting, .calculator .calculator-body .list .basicElement .span1terminal, .calculator .calculator-body .list .accountingElement span.span1accounting, .calculator .calculator-body .list .accountingElement .span1terminal, .calculator .calculator-body .list .terminalElement span.span1accounting, .calculator .calculator-body .list .terminalElement .span1terminal, .calculator .calculator-body .list2 .element span.span1accounting, .calculator .calculator-body .list2 .element .span1terminal, .calculator .calculator-body .list2 .quantityElement span.span1accounting, .calculator .calculator-body .list2 .quantityElement .span1terminal, .calculator .calculator-body .list2 .ordersElement span.span1accounting, .calculator .calculator-body .list2 .ordersElement .span1terminal, .calculator .calculator-body .list2 .basicElement span.span1accounting, .calculator .calculator-body .list2 .basicElement .span1terminal, .calculator .calculator-body .list2 .accountingElement span.span1accounting, .calculator .calculator-body .list2 .accountingElement .span1terminal, .calculator .calculator-body .list2 .terminalElement span.span1accounting, .calculator .calculator-body .list2 .terminalElement .span1terminal {
+  position: relative;
+  right: 30px;
+}
+.calculator .calculator-body .list .element span.span3accounting, .calculator .calculator-body .list .element .span3terminal, .calculator .calculator-body .list .quantityElement span.span3accounting, .calculator .calculator-body .list .quantityElement .span3terminal, .calculator .calculator-body .list .ordersElement span.span3accounting, .calculator .calculator-body .list .ordersElement .span3terminal, .calculator .calculator-body .list .basicElement span.span3accounting, .calculator .calculator-body .list .basicElement .span3terminal, .calculator .calculator-body .list .accountingElement span.span3accounting, .calculator .calculator-body .list .accountingElement .span3terminal, .calculator .calculator-body .list .terminalElement span.span3accounting, .calculator .calculator-body .list .terminalElement .span3terminal, .calculator .calculator-body .list2 .element span.span3accounting, .calculator .calculator-body .list2 .element .span3terminal, .calculator .calculator-body .list2 .quantityElement span.span3accounting, .calculator .calculator-body .list2 .quantityElement .span3terminal, .calculator .calculator-body .list2 .ordersElement span.span3accounting, .calculator .calculator-body .list2 .ordersElement .span3terminal, .calculator .calculator-body .list2 .basicElement span.span3accounting, .calculator .calculator-body .list2 .basicElement .span3terminal, .calculator .calculator-body .list2 .accountingElement span.span3accounting, .calculator .calculator-body .list2 .accountingElement .span3terminal, .calculator .calculator-body .list2 .terminalElement span.span3accounting, .calculator .calculator-body .list2 .terminalElement .span3terminal {
+  position: relative;
+  font-weight: 600;
+  left: 30px;
+}
+.calculator .calculator-body .list .valueLI, .calculator .calculator-body .list2 .valueLI {
+  margin-top: 8px;
+  width: 241px;
+  height: 31px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  background-color: #08A6E4;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  left: 73px;
+  bottom: 38px;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.contact {
+  margin-top: 100px;
+  height: 376px;
+  display: flex;
+  justify-content: center;
+}
+.contact .contact-box {
+  display: flex;
+}
+.contact .contact-box .contact-left {
+  height: 376px;
+  width: 400px;
+}
+.contact .contact-box .contact-left h1 {
+  font-size: 49px;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 16px;
+}
+.contact .contact-box .contact-left p {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  padding-top: 16px;
+}
+.contact .contact-box .contact-left .mail-and-phone {
+  display: flex;
+  position: relative;
+  right: 18px;
+}
+.contact .contact-box .contact-left .mail-and-phone p {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  margin: 30px 10px 10px 10px;
+  color: gray;
+}
+.contact .contact-box .contact-left .mail-and-phone p .fa-mail {
+  margin: 5px;
+  color: #08a6e4;
+}
+.contact .contact-box .contact-left .mail-and-phone p .fa-tel {
+  margin: 5px;
+  color: #08a6e4;
+}
+.contact .contact-box .contact-right .contact-inputs {
+  width: 440px;
+  height: 157px;
+}
+.contact .contact-box .contact-right .contact-inputs p {
+  letter-spacing: 3.28px;
+  font-size: 11px;
+  font-family: "Open Sans", sans-serif;
+  color: #08a6e4;
+  font-weight: bold;
+}
+.contact .contact-box .contact-right .contact-inputs input {
+  width: 440px;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #a5a5a5;
+  margin-bottom: 10px;
+}
+.contact .contact-box .contact-right .checkbox-label {
+  display: flex;
+  width: 439px;
+  height: 108px;
+  font-size: 12px;
+}
+.contact .contact-box .contact-right .checkbox-label input {
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+}
+.contact .contact-box .contact-right .checkbox-label p {
+  margin-left: 10px;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  width: 405px;
+  height: 108px;
+  color: #707070;
+}
+.contact .contact-box .contact-right button {
+  border-radius: 50px;
+  width: 226px;
+  height: 57px;
+  background-color: #08a6e4;
+  color: #ffffff;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.1607843137);
+  border: none;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  position: relative;
+  left: 210px;
+}/*# sourceMappingURL=style.css.map */

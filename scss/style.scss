@@ -1,0 +1,866 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700;800&display=swap");
+
+//Colors
+$color-primary: #08a6e4;
+$color-primary-shadow: rgba(7, 172, 230, 0.16);
+$color-redish: #fb3b64;
+$color-green: #55dfb4;
+$color-black: #000000;
+$color-grey: #a5a5a5;
+$color-light-grey: #f7f7f7;
+$color-white: #ffffff;
+
+//Fonts
+$font-open-sans: "Open Sans", sans-serif;
+$font-raleway: "Raleway", sans-serif;
+
+/*
+em, rem - ustawianie wielkości fontów czy wysokości linii
+vw, vh - kiedy musimy wymusić na elemencie relatywną szerokość czy wysokość względem wielkości ekranu (przydatne kiedy sekcja ma zajmować 100% wysokości ekranu)
+px - marginesy, paddingi, cienie, bordery itp.
+*/
+
+.navbar {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+
+  .navbar-logo-list {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-white;
+    box-shadow: 0px 3px 6px #00000029;
+    h1 {
+      font-family: $font-raleway;
+      color: $color-primary;
+      font-size: 32px;
+      font-weight: 300;
+      position: relative;
+      right: 400px;
+    }
+    ul {
+      font-family: $font-open-sans;
+      display: flex;
+      position: relative;
+      left: 400px;
+      li {
+        margin: 0 40px;
+        padding: 27px 18px 27px 18px;
+        color: $color-grey;
+        font-size: 11px;
+        letter-spacing: 3.28px;
+      }
+      li:hover {
+        padding: 27px 18px 27px 18px;
+        border-bottom: 4px solid #08a6e4;
+        cursor: pointer;
+        color: $color-black;
+        font-weight: 600;
+        letter-spacing: 3.28px;
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .container-text {
+    position: relative;
+    top: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+      text-align: center;
+      width: 226px;
+      height: 57px;
+      font-size: 49px;
+      font-family: $font-raleway;
+    }
+    p {
+      text-align: center;
+      font-family: $font-open-sans;
+      margin-top: 20px;
+      font-weight: 500;
+      margin-bottom: 38px;
+    }
+    button {
+      width: 440px;
+      height: 67px;
+      background-color: $color-primary;
+      border-radius: 40px;
+      border: none;
+      color: $color-white;
+      font-family: $font-open-sans;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: 0px 3px 6px $color-primary-shadow;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 180px;
+  }
+}
+
+// Sekcja otwierająca - 'The most popular sales platform in country'
+.most-popular-section {
+  height: 531px;
+  border: 1px solid black;
+  margin-top: 180px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .most-popular-heading-text {
+    margin-top: 100px;
+    font-size: 36px;
+    font-family: $font-raleway;
+    position: relative;
+  }
+  .most-popular-columns {
+    width: 100%;
+    height: 531px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -50px;
+    .daily-entries {
+      margin: 0 100px 0 100px;
+      height: 140px;
+      width: 116px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: $font-raleway;
+      .elipse {
+        width: 62px;
+        height: 62px;
+        background-color: $color-redish;
+        border-radius: 50px;
+        img {
+          position: relative;
+          left: 28px;
+        }
+      }
+      h1 {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 15px;
+        letter-spacing: 3px;
+      }
+      p {
+        font-size: 17px;
+        color: $color-grey;
+      }
+    }
+    .seen-products {
+      margin: 0 100px 0 100px;
+      height: 167px;
+      width: 176px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: $font-raleway;
+      .elipse {
+        width: 62px;
+        height: 62px;
+        background-color: $color-primary;
+        border-radius: 50px;
+        img {
+          position: relative;
+          left: 20px;
+          top: 13px;
+        }
+      }
+      h1 {
+        position: relative;
+        top: 15px;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 3px;
+      }
+      p {
+        position: relative;
+        top: 17px;
+        margin-top: 12px;
+        text-align: center;
+        font-size: 17px;
+        color: $color-grey;
+      }
+    }
+    .added-post {
+      margin: 0 100px 0 100px;
+      height: 167px;
+      width: 176px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: $font-raleway;
+      .elipse {
+        width: 62px;
+        height: 62px;
+        background-color: $color-green;
+        border-radius: 50px;
+        margin-bottom: 14px;
+        img {
+          position: relative;
+          left: 30px;
+          top: 5px;
+        }
+      }
+      h1 {
+        position: relative;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 3px;
+      }
+      p {
+        position: relative;
+        margin-top: 15px;
+        text-align: center;
+        font-size: 17px;
+        color: $color-grey;
+      }
+    }
+  }
+}
+
+//statistics - section
+
+.statistics-section {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  height: 1395px;
+  .statistics-1 {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #e8e9ed;
+    width: 1124px;
+    height: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .statistics-1-text {
+      position: relative;
+      right: 100px;
+      h1 {
+        margin: 20px 0 20px 0;
+        font-family: $font-raleway;
+        font-size: 36px;
+      }
+      p {
+        font-family: $font-open-sans;
+        font-size: 16px;
+      }
+      width: 416px;
+      height: 188px;
+      text-align: left;
+    }
+    hr {
+      position: relative;
+      right: 42px;
+      top: 30px;
+    }
+
+    .statistics-1-image {
+      width: 433px;
+      height: 294px;
+      position: relative;
+      left: 60px;
+      .square {
+        width: 180px;
+        height: 180px;
+        border-radius: 41px;
+        background-color: $color-redish;
+        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+        z-index: 2;
+        margin-left: 210px;
+      }
+      img {
+        width: 386px;
+        height: 219px;
+        z-index: 3;
+        position: relative;
+        bottom: 130px;
+      }
+    }
+  }
+
+  .statistics-2 {
+    margin-top: 37px;
+    background-color: white;
+    border-radius: 5px;
+    width: 1124px;
+    height: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e8e9ed;
+
+    .statistics-2-text {
+      position: relative;
+      left: 120px;
+      h1 {
+        margin: 20px 0 20px 0;
+        font-family: $font-raleway;
+        font-size: 36px;
+      }
+      p {
+        font-family: $font-open-sans;
+        font-size: 16px;
+      }
+      width: 416px;
+      height: 188px;
+      text-align: left;
+    }
+    hr {
+      position: relative;
+      right: 40px;
+      top: 30px;
+    }
+
+    .statistics-2-image {
+      width: 433px;
+      height: 294px;
+      position: relative;
+      right: 70px;
+      bottom: 20px;
+      .square {
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background-color: $color-primary;
+        z-index: 2;
+      }
+      img {
+        width: 426px;
+        height: 328px;
+        z-index: 3;
+        position: relative;
+        bottom: 300px;
+      }
+    }
+  }
+  .statistics-3 {
+    margin-top: 37px;
+    width: 1126px;
+    height: 372px;
+    .statistics-3-box {
+      display: flex;
+      .statistics-3-text {
+        width: 623px;
+        height: 370px;
+        border: 1px solid #e8e9ed;
+        background-color: $color-white;
+        border-radius: 5px;
+        h1 {
+          position: relative;
+          left: 30px;
+          top: 70px;
+          font-size: 36px;
+          font-family: $font-raleway;
+        }
+        p {
+          top: 70px;
+          font-size: 16px;
+          font-family: $font-open-sans;
+          margin-top: 30px;
+          position: relative;
+          left: 30px;
+        }
+        hr {
+          position: relative;
+          right: 110px;
+          margin-top: 44px;
+          position: relative;
+          top: 70px;
+        }
+      }
+      .statistics-3-image {
+        border: 1px solid #e8e9ed;
+        width: 440px;
+        height: 370px;
+        border-radius: 5px;
+        background-color: #55dfb4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 62px;
+        img {
+          width: 296px;
+          height: 208px;
+        }
+      }
+    }
+  }
+}
+// PRICING------------------------------------------------
+.pricing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .pricing-headText {
+    margin-top: 100px;
+    font-size: 36px;
+    font-family: $font-raleway;
+  }
+  .pricing-box {
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    width: 1266px;
+    height: 616px;
+
+    .pricing-basic {
+      margin: 20px 30px 0 60px;
+      width: 372px;
+      height: 461px;
+      border-radius: 18px;
+      border: 1px solid $color-redish;
+      h2 {
+        font-size: 20px;
+        font-family: $font-raleway;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 34px;
+        margin-bottom: 24px;
+      }
+      h1 {
+        font-size: 46px;
+        font-family: $font-open-sans;
+        color: #fb3b64;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 70px;
+      }
+      .pricing-basic-list {
+        text-align: center;
+        font-size: 14px;
+        font-family: $font-open-sans;
+        .fa-yes {
+          margin: 10px 0 10px 0;
+          color: $color-green;
+          margin-right: 10px;
+        }
+        .fa-no {
+          margin: 10px 0 10px 0;
+          color: $color-redish;
+          margin-right: 10px;
+        }
+      }
+      .pricing-basic-button {
+        border-radius: 23px;
+        width: 150px;
+        height: 50px;
+        background-color: $color-redish;
+        color: $color-white;
+        border: none;
+        font-size: 13px;
+        font-family: $font-open-sans;
+        font-weight: 600;
+        position: relative;
+        top: 70px;
+      }
+    }
+    .pricing-professional {
+      box-shadow: 5px 10px 27px #07ace629;
+      margin: 0 30px 0 30px;
+      width: 405px;
+      height: 500px;
+      border-radius: 18px;
+      text-align: center;
+      border: 1px solid $color-primary;
+      h2 {
+        font-size: 20px;
+        font-family: $font-raleway;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 34px;
+        margin-bottom: 24px;
+      }
+      h1 {
+        font-size: 46px;
+        font-family: $font-open-sans;
+        color: $color-primary;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 70px;
+      }
+      .pricing-small-offer {
+        font-size: 12px;
+        font-family: $font-raleway;
+        text-align: center;
+        font-weight: 600;
+        position: relative;
+        bottom: 50px;
+      }
+      .pricing-professional-list {
+        text-align: center;
+        font-size: 14px;
+        font-family: $font-open-sans;
+        .fa-yes {
+          margin: 10px 0 10px 0;
+          color: $color-green;
+          margin-right: 10px;
+        }
+        .fa-no {
+          margin: 10px 0 10px 0;
+          color: $color-redish;
+          margin-right: 10px;
+        }
+      }
+      .pricing-professional-button {
+        border-radius: 23px;
+        width: 150px;
+        height: 50px;
+        background-color: $color-primary;
+        color: $color-white;
+        border: none;
+        font-size: 13px;
+        font-family: $font-open-sans;
+        font-weight: 600;
+        position: relative;
+        top: 100px;
+      }
+    }
+    .pricing-premium {
+      margin: 20px 60px 0 30px;
+      width: 372px;
+      height: 461px;
+      border-radius: 18px;
+      border: 1px solid $color-green;
+      h2 {
+        font-size: 20px;
+        font-family: $font-raleway;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 34px;
+        margin-bottom: 24px;
+      }
+      h1 {
+        font-size: 46px;
+        font-family: $font-open-sans;
+        color: $color-green;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 70px;
+      }
+      .pricing-small-offer {
+        font-size: 12px;
+        font-family: $font-raleway;
+        text-align: center;
+        font-weight: 600;
+        position: relative;
+        bottom: 50px;
+      }
+      .pricing-premium-list {
+        text-align: center;
+        font-size: 14px;
+        font-family: $font-open-sans;
+        .fa-yes {
+          margin: 10px 0 10px 0;
+          color: $color-green;
+          margin-right: 10px;
+        }
+        .fa-no {
+          margin: 10px 0 10px 0;
+          color: $color-redish;
+          margin-right: 10px;
+        }
+      }
+      .pricing-premium-button {
+        border-radius: 23px;
+        width: 150px;
+        height: 50px;
+        background-color: $color-green;
+        color: $color-white;
+        border: none;
+        font-size: 13px;
+        font-family: $font-open-sans;
+        font-weight: 600;
+        position: relative;
+        top: 70px;
+      }
+    }
+  }
+}
+
+.calculator {
+  width: 100vw;
+  height: 538px;
+  background-color: $color-light-grey;
+  h1 {
+    padding-top: 87px;
+    text-align: center;
+    font-size: 36px;
+    font-family: $font-raleway;
+  }
+  .calculator-body {
+    display: flex;
+    justify-content: center;
+
+    .calculator-body-left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      right: 40px;
+      margin-top: 52px;
+width: 440px;
+      .product-input, .orders-input{
+        margin-top: 10px; 
+        margin-bottom: 10px; 
+        width: 440px;
+        height: 40px;
+        box-shadow: 0px 3px 6px #08a6e429;
+        border: 1px solid #08a6e4;
+        border-radius: 6px;
+        font-size: 13px;
+        color: $color-grey;        
+        font-size: 13px;
+        font-family: $font-open-sans;
+   
+      }
+      .choose-package{
+        cursor: pointer;
+        margin-top: 10px; 
+        margin-bottom: 10px; 
+        width: 443px;
+        height: 40px;
+        box-shadow: 0px 3px 6px #08a6e429;
+        border: 1px solid #08a6e4;
+        border-radius: 6px;
+        font-size: 13px;
+        font-family: $font-open-sans;
+        color: $color-grey;
+        background-color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .choose-package-elements{display: none;
+        width: 440px;
+        height: 105px;
+        border: 1px solid #EB476E;
+        border-radius: 6px;
+        background: white;
+        div{
+          background-color: $color-white;
+          height: 33%;
+          font-size: 13px;
+          font-family: $font-open-sans;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          position: relative;
+          border-radius: 6px;
+        }
+        div:hover{
+          background-color: $color-light-grey;}
+      }
+    }
+    .checkbox-label-pay1, .checkbox-label-pay2 {
+      width: 300px;
+      height: 24px;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      right: 70px;
+      input {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        
+      }
+      p{
+        font-size: 13px;
+        font-family: $font-open-sans;
+        position: relative;
+      }
+
+    }
+    .list,.list2 {
+      width: 385px;
+      height: 247px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      // border: 1px solid black;
+      position: relative;
+      top: 60px;
+      .element,.quantityElement,.ordersElement,.basicElement,.accountingElement,.terminalElement{
+        margin-top: 8px;
+        width: 385px;
+        height: 31px;
+        box-shadow: 0px 3px 6px #00000029;
+        background-color: $color-green;
+        color: white;
+        display: flex;
+        align-items:center;
+        justify-content:space-around;
+        position: relative;
+        bottom: 38px;
+        font-family: $font-open-sans;
+        border-radius: 6px;
+        font-size: 14px;
+
+          
+        span:nth-of-type(3),.span3products,.span3orders,.span3basic{
+          font-weight: 600;
+        }
+        span.span1products{
+          position: relative;
+          right: 0px;
+        }
+        // span.span1accounting{
+
+        // }
+        span.span1accounting,.span1terminal{
+          position: relative;
+          right: 30px;
+        }
+        span.span3accounting,.span3terminal{
+          position: relative;
+          font-weight: 600;
+          left: 30px;
+
+        }
+      }
+      .valueLI{
+        margin-top: 8px;
+        width: 241px;
+        height: 31px;
+        box-shadow: 0px 3px 6px #00000029;
+        background-color: #08A6E4;
+        color: white;
+        font-weight: 600;
+        display: flex;
+        align-items:center;
+        justify-content:space-around;
+        position: relative;
+        left: 73px;
+        bottom: 38px;
+        font-family: $font-open-sans;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+ 
+//CONTACT ---------------------------------------------------------------------------------------------------------------
+.contact {
+  margin-top: 100px;
+  height: 376px;
+  display: flex;
+  justify-content: center;
+  .contact-box {
+    display: flex;
+    .contact-left {
+      height: 376px;
+      width: 400px;
+      h1 {
+        font-size: 49px;
+        font-family: $font-raleway;
+        margin-bottom: 16px;
+      }
+      p {
+        font-size: 16px;
+        font-family: $font-open-sans;
+        padding-top: 16px;
+      }
+      .mail-and-phone {
+        display: flex;
+        position: relative;
+        right: 18px;
+        p {
+          font-size: 16px;
+          font-family: $font-open-sans;
+          margin: 30px 10px 10px 10px;
+          color: gray;
+          .fa-mail {
+            margin: 5px;
+            color: $color-primary;
+          }
+          .fa-tel {
+            margin: 5px;
+            color: $color-primary;
+          }
+        }
+      }
+    }
+    .contact-right {
+      .contact-inputs {
+        width: 440px;
+        height: 157px;
+        p {
+          letter-spacing: 3.28px;
+          font-size: 11px;
+          font-family: $font-open-sans;
+          color: $color-primary;
+          font-weight: bold;
+        }
+        input {
+          width: 440px;
+          height: 40px;
+          border: none;
+          border-bottom: 1px solid $color-grey;
+          margin-bottom: 10px;
+        }
+      }
+      .checkbox-label {
+        display: flex;
+        width: 439px;
+        height: 108px;
+        font-size: 12px;
+        input {
+          width: 24px;
+          height: 24px;
+          font-size: 12px;
+        }
+        p {
+          margin-left: 10px;
+          font-size: 12px;
+          font-family: $font-open-sans;
+          width: 405px;
+          height: 108px;
+          color: #707070;
+        }
+      }
+      button {
+        border-radius: 50px;
+        width: 226px;
+        height: 57px;
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 5px 10px 14px #07ace629;
+        border: none;
+        font-size: 13px;
+        font-family: $font-open-sans;
+        font-weight: 600;
+        position: relative;
+        left: 210px;
+      }
+    }
+  }
+}
